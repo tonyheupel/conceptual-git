@@ -2,7 +2,6 @@ public class App {
 	public static void main(String[] args) {
 		appendLinkedList();
 		insertLinkedList();
-		createRepo();
 	}
 	
 
@@ -19,19 +18,5 @@ public class App {
 		list.insert(new Node<Integer>(3));
 
 		System.out.println(list);
-	}
-
-	private static void createRepo() {
-		Repo r = Repo.init();
-		r.add(1);
-		r.commit();
-
-		r.add(2);
-		r.commit();
-
-		r.add(3);
-		r.commit();
-
-		System.out.println(r);
 	}
 }
