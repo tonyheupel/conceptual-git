@@ -12,7 +12,7 @@ public class Branch {
 	public String toString() {
 		String output  = "HEAD";
 
-		if (head == null) {
+		if (this.head == null) {
 			return output;
 		}
 
@@ -31,10 +31,10 @@ public class Branch {
 
 
 	public void commit(Commit node) {
-		if (head != null) {
-			node.addParent(head);
+		if (this.head != null) {
+			node.addParent(this.head);
 		}
 
-		head = node;
+		this.head = node;
 	}
 }

@@ -28,6 +28,11 @@ public class LinkedList<T> {
 
 
 	public void append(Node<T> node) {
+		if (head == null) {
+			head = node;
+			return;
+		}
+
 		Node<T> current = head;
 
 		while (current.next != null) {
@@ -38,7 +43,10 @@ public class LinkedList<T> {
 	}
 
 	public void insert(Node<T> node) {
-		node.next = head;
+		if (head != null) {
+			node.next = head;
+		}
+
 		head = node;
 	}
 }
