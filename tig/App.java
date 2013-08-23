@@ -5,13 +5,13 @@ public class App {
 	
 	private static void createRepo() {
 		Repo r = Repo.init();
-		r.add(1);
+		r.add(new CommitValue(1));
 		r.commit();
 
-		r.add(2);
+		r.add(new CommitValue(2));
 		r.commit();
 
-		r.add(3);
+		r.add(new CommitValue(3));
 		r.commit();
 
 		System.out.println(r);

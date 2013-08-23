@@ -11,7 +11,7 @@ public class Branch {
 	@Override
 	public String toString() {
 		String output  = "HEAD";
-		
+
 		if (head == null) {
 			return output;
 		}
@@ -24,12 +24,17 @@ public class Branch {
 			return "";
 		}
 
-		return String.format("%s%s%s", node.value.toString(), node.next == null ? "" : "-->", stringifyCommit(node.next));
+		return String.format("%s%s%s", node.getValue().toString(),
+			node.getParents().iterator().hasNext() ? "-->" : "",
+		   	stringifyCommit(node.getParents().iterator().hasNext() ? node.getParents().iterator().next() : null));
 	}
 
 
 	public void commit(Commit node) {
-		node.next = head;
+		if (head != null) {
+			node.addParent(head);
+		}
+
 		head = node;
 	}
 }
