@@ -16,7 +16,7 @@ the concepts using familiar programming concepts.
 # Licensing
 
 While I am providing all of this out in the open, I do NOT intend for others to modify for their own uses or to
-create derivative works of their own. Thus, it is GPL Licensed.
+create derivative works of their own. Thus, it is copyrighted by me.
 
 
 # Contact
