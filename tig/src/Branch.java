@@ -1,6 +1,6 @@
 public class Branch {
-	public String name;
-	public Commit head;
+	private String name;
+	private Commit head;
 
 	public Branch(String name, Commit initialHead) {
 		this.head = initialHead;
@@ -10,13 +10,21 @@ public class Branch {
 
 	@Override
 	public String toString() {
-		String output  = "HEAD";
+		String output  = this.getName();
 
 		if (this.head == null) {
 			return output;
 		}
 
-		return String.format("HEAD=>%s", stringifyCommit(head));
+		return String.format("%s=>%s", output, stringifyCommit(head));
+	}
+
+	public String getName() { 
+		return this.name;
+	}
+
+	public Commit getHead() {
+		return this.head;
 	}
 
 	private String stringifyCommit(Commit node) {
