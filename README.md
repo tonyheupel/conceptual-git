@@ -1,5 +1,6 @@
 # conceptual-git
-## git concepts for human beings
+
+### git concepts for human beings
 
 This is currently material for a talk on git concepts with some supporting code. There is more to come!
 
@@ -22,4 +23,4 @@ own uses or to create derivative works of their own. Thus, it is copyrighted by 
 
 # contact
 
-[Email me](mailto:tony@heupel.net)
+[email me](mailto:tony@heupel.net)
