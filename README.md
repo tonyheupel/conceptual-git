@@ -1,24 +1,25 @@
-# Conceptual Git
+# conceptual-git
+## git concepts for human beings
 
-This is a talk on Git concepts with some supporting code.
+This is currently material for a talk on git concepts with some supporting code. There is more to come!
 
-## Yet Another Git Talk?
+## yet another git talk?
 
-This talk is different.  The intended audience is for developers who use Git but still don't necessarily "get git" yet.
+This talk is different. The intended audience is for people who use git but still don't necessarily "get git" yet.
 
-This talk explains Git using basic Computer Science concepts in multiple ways.
-My hope is that presenting the same information visually, textually, and in code will provide
-audiences with a combination that really reinforces the concepts in Git.
+This talk explains git using basic Computer Science concepts in multiple ways. 
+My hope is that presenting the same information visually, textually, and in code will provide audiences with a
+combination of formats that really reinforces the concepts of git.
 
-This is not necessarily a fully technically correct discription of Git internals, but more an exploration of
-the concepts using familiar programming concepts.
+The content is not necessarily a fully technically correct discription of git internals, but is more of an
+exploration of the concepts using familiar programming fundamentals.
 
-# Licensing
+# licensing
 
-While I am providing all of this out in the open, I do NOT intend for others to modify for their own uses or to
-create derivative works of their own. Thus, it is copyrighted by me.
+While I am providing all of this out in the open, I do NOT intend for others to modify for their
+own uses or to create derivative works of their own. Thus, it is copyrighted by me.
 
 
-# Contact
+# contact
 
 [Email me](mailto:tony@heupel.net)
