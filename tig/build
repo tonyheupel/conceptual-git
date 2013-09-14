@@ -2,4 +2,4 @@
 
 ./clean && \
   mkdir classes && \
-  javac -d "classes" src/*.java
+  javac -d "classes" -cp "$JAVA_HOME/jre/lib/ext/" src/*.java
