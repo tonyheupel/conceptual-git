@@ -50,28 +50,57 @@
           </div>
         </header>
 
+        <!--
         <section id="downloads" class="clearfix">
           <a href="https://github.com/tchype/conceptual-git/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
           <a href="https://github.com/tchype/conceptual-git/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
           <a href="https://github.com/tchype/conceptual-git" id="view-on-github" class="button"><span>View on gitHub</span></a>
         </section>
+        -->
+        <section id="social" class="clearfix">
+        <!-- g+ -->
+        <div class="g-plusone"></div>
 
+        <script type="text/javascript">
+            (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+        </section>
         <hr>
 
         <section id="main_content">
-<p>This is currently material for a talk on git concepts with some supporting code. There is more to come!</p>
+<p>A video series dedicated to bridging the machine-to-human-being gap when it comes to using git every day.</p>
 
 <h1>
 <a name="yet-another-git-talk" class="anchor" href="#yet-another-git-talk"><span class="octicon octicon-link"></span></a>yet another git talk?</h1>
 
-<p>This talk is different.  The intended audience is for people who use git but still don't necessarily "get git" yet.</p>
+<p>These videos are different.  They do not start with the complexity of the internal object store, hashes, or crazy things you can do with git.
+These videos help you build a <i>conceptual</i> working model of git commits and branches based on other programming concepts most people are familiar with.</p>
 
-<p>This talk explains git using basic Computer Science concepts in multiple ways.
-My hope is that presenting the same information visually, textually, and in code will provide
-audiences with a combination of formats that really reinforces the concepts of git.</p>
+<iframe width="420" height="315" src="http://www.youtube.com/embed/P_FcLlfsf6I" frameborder="0" allowfullscreen></iframe>
+
+<p>The videos explain git concepts using images, animation, text, and actual code.
+My hope is that presenting the same concepts to audiences using a combination of formats that really reinforces the concepts of git.</p>
 
 <p>The content is not necessarily a fully technically correct discription of git internals, but is more of an exploration of
 the concepts using familiar programming fundamentals.</p>
+
+<h1>
+<a name="organization" class="anchor" href="#organization"><span class="octicon octicon-link"></span></a>organization</h1>
+
+<p>The videos are intended to be modular and to-the-point.  As more videos are added, they will be grouped into playlists by their topic
+in such a way that you can start from the beginning and build up the concepts you need in order to understand the topic of that playlist.
+For example, if you wanted to learn more about how <pre>git rebase -i HEAD~3</pre> works, you would look for the <em>interactive rebase</em> playlist.
+That playlist would contain:
+  <ul>
+    <li>the introductory video to help establish core concepts</li>
+    <li>the video on <em>git rebase</em></li>
+    <li> and then a video specifically on interactive rebase nuances</li>
+  </ul>
+</p>
 
 <h1>
 <a name="licensing" class="anchor" href="#licensing"><span class="octicon octicon-link"></span></a>licensing</h1>
