@@ -52,7 +52,6 @@ public class HashObject {
 
 	private static String sha1(String input) {
 		return gitSHA1("blob", input);
-		//return plainSHA1(input);
 	}
 
 	private static String plainSHA1(String input) {
@@ -89,6 +88,4 @@ public class HashObject {
 
 		return buffer.toString();
 	}
-
-
 }
