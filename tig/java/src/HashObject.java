@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
@@ -11,15 +13,30 @@ public class HashObject {
 
 
 	private static String getInput(String[] commandLineArgs) {
-		if (commandLineArgs.length > 0) return join(commandLineArgs, " ");
+		Scanner sc = initializeScanner(commandLineArgs);
 
 		StringBuffer buffer = new StringBuffer();
-		Scanner sc = new Scanner(System.in);
 		while(sc.hasNextLine()) {
 			buffer.append(sc.nextLine());
 		}
 
 		return buffer.toString();
+	}
+
+	private static Scanner initializeScanner(String[] commandLineArgs) {
+		if (commandLineArgs.length > 0) {
+			String filename = join(commandLineArgs, " ");
+
+			try {
+				File file = new File(filename);
+				return new Scanner(file);
+			} catch (FileNotFoundException ex) {
+				System.err.println(String.format("File %s not found!", filename));
+				System.exit(1);
+			}
+		}
+
+		return new Scanner(System.in);
 	}
 
 	private static String join(String[] strings, String separator) {
@@ -65,7 +82,7 @@ public class HashObject {
 		return plainSHA1(gitValueToHash);
 	}
 
-	
+
 	private static String convertBytesToHexString(byte[] data) {
 		StringBuffer buffer = new StringBuffer();
 		for (int i = 0; i < data.length; i++) {
