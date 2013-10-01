@@ -76,8 +76,6 @@ public class HashObject {
 		long size = input.length();
 
 		String gitValueToHash =  String.format("%s %d\0%s", type, size, input);
-		System.out.println(gitValueToHash);
-		System.out.println(gitValueToHash.length());
 
 		return plainSHA1(gitValueToHash);
 	}
