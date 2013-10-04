@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-./tig.rb $@
+./lib/tig.rb "$@"

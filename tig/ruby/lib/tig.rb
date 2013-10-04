@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require './lib/commands/hash_object'
+require_relative './commands/hash_object'
 
 def hash_object
   puts sha1(ARGF.read)
