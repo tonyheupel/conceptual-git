@@ -33,8 +33,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="HashObject.cs" />
     <Compile Include="Utilities.cs" />
+    <Compile Include="CommitValue.cs" />
+    <Compile Include="Commit.cs" />
+    <Compile Include="Branch.cs" />
+    <Compile Include="Commands\HashObject.cs" />
+    <Compile Include="Repo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Commands\" />
+  </ItemGroup>
 </Project>

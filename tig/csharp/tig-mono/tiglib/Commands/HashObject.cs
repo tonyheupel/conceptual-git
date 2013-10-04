@@ -3,7 +3,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace tiglib
+namespace tiglib.Commands
 {
 	public class HashObject
 	{

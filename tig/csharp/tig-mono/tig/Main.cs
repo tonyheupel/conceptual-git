@@ -1,7 +1,8 @@
 using System;
-using tiglib;
 using System.IO;
 using System.Collections.Generic;
+using tiglib;
+using tiglib.Commands;
 
 namespace tig
 {
@@ -15,13 +16,38 @@ namespace tig
 				case "hash-object":
 					HashObjectHelper (args);
 					break;
+
+				case "demo":
+					DemoHelper();
+					break;
 				default:
 					Console.WriteLine("'{0}' is not a known command", command);
 					break;
 			}
 		}
 
-		public static void HashObjectHelper(string[] args)
+		static void DemoHelper ()
+		{
+			var repo = Repo.Init ();
+			AddAndCommit (repo, 1);
+			AddAndCommit (repo, 2);
+			AddAndCommit (repo, 3);
+			Console.WriteLine ("Repo => {0}", repo);
+		}
+
+		private static void AddAndCommit(Repo repo, object value)
+		{
+			CommitValue commitValue = CreateCommitValue(value);
+			repo.Add(commitValue);
+			repo.Commit();
+		}
+
+		private static CommitValue CreateCommitValue(object value)
+		{
+			return new CommitValue (value);
+		}
+
+		private static void HashObjectHelper(string[] args)
 		{
 			Console.WriteLine (HashObject.Hash (GetHashInputStream(args)));
 		}
