@@ -15,11 +15,8 @@ class HashObject
 
 
     def sha1(input)
-      Digest::SHA1.hexdigest(input)
+      Digest::SHA2.hexdigest(input)
     end
-
-    # ARGF handles filename input from command line or STDIN if no filename
-    #puts sha1(ARGF.read)
 
   end
 end
