@@ -3,7 +3,7 @@
 require_relative './commands/hash_object'
 
 def hash_object
-  puts sha1(ARGF.read)
+  puts HashObject.hash(ARGF.read)
 end
 
 def get_op
