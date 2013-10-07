@@ -15,7 +15,7 @@ class HashObject
 
 
     def sha1(input)
-      Digest::SHA2.hexdigest(input)
+      Digest::SHA1.hexdigest(input)
     end
 
   end
