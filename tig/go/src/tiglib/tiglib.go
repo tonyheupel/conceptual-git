@@ -17,7 +17,7 @@ var (
 // Commit represents a git commit
 type Commit struct {
 	Value string
-	Parents []Commit
+	Parents []*Commit
 }
 
 func (c Commit) String()  string {
@@ -34,11 +34,15 @@ func (c Commit) String()  string {
 	return c.Value + arrow + next
 }
 
+func NewCommit(value string) *Commit {
+	var parents []*Commit
+	return &Commit{value, parents}
+}
 
 // Branch represents a git branch
 type Branch struct {
 	Name string
-	Head Commit
+	Head *Commit
 }
 
 func (b Branch) String() string {
@@ -55,12 +59,24 @@ type Repo struct {
 	Branches map[string]Branch
 }
 
-func (r Repo) GetHead() Commit {
+func (r Repo) GetHead() *Commit {
 	return r.CurrentBranch.Head
 }
 
 func (r Repo) String() string {
 	return "Repo: " + r.CurrentBranch.String()
+}
+
+func (r Repo) Commit(value string) string {
+	commit := NewCommit(value)
+	oldHead := r.GetHead()
+
+	if oldHead != nil {
+		oldHead.Parents = append(oldHead.Parents, commit)
+	}
+
+	r.CurrentBranch.Head = commit
+	return r.String()
 }
 
 func newRepo() Repo {
@@ -80,3 +96,4 @@ func newRepo() Repo {
 func Init() Repo {
 	return newRepo()
 }
+
